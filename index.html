@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>عهد — أدواتٌ صنعتها للفائدة</title>
+    <meta
+      name="description"
+      content="مساحة شخصية تجمع أدواتٍ رقمية وُلدت أفكارها من حاجاتٍ حقيقية، صنعتها عهد مستعينةً بالذكاء الاصطناعي؛ لتيسّر تعلّمًا، أو تعين على خير."
+    />
+    <meta name="theme-color" content="#0000FF" />
+    <meta name="color-scheme" content="dark" />
+
+    <!-- بطاقات المشاركة -->
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="ar_SA" />
+    <meta property="og:title" content="عهد — أدواتٌ صنعتها للفائدة" />
+    <meta
+      property="og:description"
+      content="أدواتٌ رقمية وُلدت أفكارها من حاجاتٍ حقيقية، صُنعت بمعونة الذكاء الاصطناعي؛ لتيسّر تعلّمًا، أو تعين على خير."
+    />
+    <meta name="twitter:card" content="summary" />
+
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+
+    <!--
+      خط ثمانية هو خط الموقع الأساسي، ويُحمَّل من المجلد المحلي fonts.
+      وخط IBM Plex Sans Arabic خطٌ احتياطي قريب الروح، يضمن اتّساق الصفحة
+      إن لم تكن ملفات خط ثمانية موجودة بعد (التفاصيل في README).
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&amp;display=swap"
+    />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- يمنع وميض العناصر قبل تشغيل حركة الظهور -->
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+  </head>
+
+  <body>
+    <a class="skip-link" href="#main">تخطَّ إلى المحتوى</a>
+
+    <header class="site-header">
+      <div class="wrap site-header__inner">
+        <a class="wordmark" href="#main">
+          <span class="wordmark__mark" aria-hidden="true"></span>
+          <span class="wordmark__text">عهد</span>
+        </a>
+        <a class="nav-link" href="#tools">الأدوات</a>
+      </div>
+    </header>
+
+    <main id="main">
+      <!-- ═══ التعريف ═══ -->
+      <section class="hero wrap" aria-labelledby="hero-title">
+        <div class="hero__head">
+          <p class="eyebrow reveal">أدواتٌ صنعتها للفائدة</p>
+          <h1 class="hero__title reveal" id="hero-title">أنا عهد.</h1>
+        </div>
+
+        <div class="hero__body">
+          <p class="hero__lead reveal">
+            أؤمن أن المعرفة لا يكتمل معناها حتى تُثمر نفعًا، وأن قيمة التقنية لا
+            تُقاس بما تتيحه من قدرة، بل بما تصنعه من أثر في حياة الإنسان.
+          </p>
+
+          <p class="hero__text reveal">
+            في هذه المساحة أجمع أدواتٍ رقمية وُلدت أفكارها من حاجاتٍ حقيقية،
+            وصنعتُها مستعينةً بالذكاء الاصطناعي؛ لتيسّر تعلّمًا، أو تعين على
+            خير، أو تفتح لفكرةٍ نافعة طريقًا إلى الوجود.
+          </p>
+        </div>
+      </section>
+
+      <div class="wrap" aria-hidden="true"><div class="ornament"></div></div>
+
+      <!-- ═══ الأدوات ═══ -->
+      <section class="tools wrap" id="tools" aria-labelledby="tools-title">
+        <div class="section-head reveal">
+          <h2 class="section-head__title" id="tools-title">الأدوات</h2>
+          <p class="section-head__note">والقائمة تنمو</p>
+        </div>
+
+        <!--
+          ▸ لإضافة أداة جديدة مستقبلًا:
+            انسخ عنصر <article class="card"> ... </article> كاملًا،
+            ثم عدّل: الرقم، والاسم، والوسم، والوصف، والرابط، واسم النطاق.
+            الشبكة تتكفّل بالترتيب والتجاوب تلقائيًا مهما بلغ عدد البطاقات.
+        -->
+        <ul class="cards" role="list">
+          <!-- ▸ بطاقة: غِراس -->
+          <li class="reveal">
+            <article class="card">
+              <span class="card__num" aria-hidden="true">٠١</span>
+              <h3 class="card__title">غِراس</h3>
+              <p class="card__tag">قصصٌ للأطفال</p>
+              <p class="card__desc">
+                منصّة لتأليف قصص أطفال شخصية، يكون فيها الطفل بطل الحكاية،
+                وتُنسج أحداثها حول قيمة تختارها الأسرة، بأسلوب تربوي ممتع بعيد
+                عن الوعظ المباشر.
+              </p>
+              <div class="card__foot">
+                <a
+                  class="btn"
+                  href="https://ghiras.kids"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>زيارة الموقع</span>
+                  <svg
+                    class="btn__arrow"
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M17 7H7v10" />
+                    <path d="M7 7l10 10" />
+                  </svg>
+                  <span class="sr-only">— غِراس، يفتح في نافذة جديدة</span>
+                </a>
+                <span class="card__domain" dir="ltr">ghiras.kids</span>
+              </div>
+            </article>
+          </li>
+
+          <!-- ▸ بطاقة: وقار -->
+          <li class="reveal">
+            <article class="card">
+              <span class="card__num" aria-hidden="true">٠٢</span>
+              <h3 class="card__title">وقار</h3>
+              <p class="card__tag">جدولٌ للقرآن</p>
+              <p class="card__desc">
+                أداة مجانية لإنشاء جدول مخصّص لختم القرآن أو حفظه وفق المدة
+                ونقطة البداية، مع إمكانية استثناء أيام محددة ومتابعة التقدّم.
+              </p>
+              <div class="card__foot">
+                <a
+                  class="btn"
+                  href="https://cyanera.github.io/Waqar/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <span>زيارة الموقع</span>
+                  <svg
+                    class="btn__arrow"
+                    viewBox="0 0 24 24"
+                    width="17"
+                    height="17"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M17 7H7v10" />
+                    <path d="M7 7l10 10" />
+                  </svg>
+                  <span class="sr-only">— وقار، يفتح في نافذة جديدة</span>
+                </a>
+                <span class="card__domain" dir="ltr">cyanera.github.io/Waqar</span>
+              </div>
+            </article>
+          </li>
+          <!-- ▸ الصق البطاقة الجديدة هنا -->
+        </ul>
+      </section>
+    </main>
+
+    <!-- ═══ الخاتمة ═══ -->
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="ornament" aria-hidden="true"></div>
+        <p class="site-footer__line reveal">
+          أرجو أن يتّسع نفعها، ويمتدّ أثرها أبعد من صانعتها.
+        </p>
+      </div>
+    </footer>
+
+    <script src="main.js" defer></script>
+  </body>
+</html>
