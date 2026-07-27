@@ -24,15 +24,22 @@
     <link rel="icon" href="favicon.svg" type="image/svg+xml" />
 
     <!--
-      خط ثمانية هو خط الموقع الأساسي، ويُحمَّل من المجلد المحلي fonts.
-      وخط IBM Plex Sans Arabic خطٌ احتياطي قريب الروح، يضمن اتّساق الصفحة
-      إن لم تكن ملفات خط ثمانية موجودة بعد (التفاصيل في README).
+      خط ثمانية داخل المستودع، فلا تعتمد الصفحة على أي خدمة خارجية.
+      نُسبق تحميل وزنَي النصوص والعناوين لأنهما أول ما يظهر.
     -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;700&amp;display=swap"
+      rel="preload"
+      href="fonts/thmanyah-serif-text-Regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href="fonts/thmanyah-serif-text-Black.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
     />
     <link rel="stylesheet" href="styles.css" />
 

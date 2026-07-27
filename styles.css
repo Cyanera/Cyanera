@@ -4,62 +4,51 @@
    ═══════════════════════════════════════════════════════════════ */
 
 /* ── ١. خط ثمانية ─────────────────────────────────────────────
-   خط الموقع الأساسي، وملفاته تُقرأ من المجلد المحلي fonts داخل
-   المستودع. ولا يُوزَّع الخط هنا احترامًا لترخيص ثمانية، فالتنزيل من
-   موقعه الرسمي: https://font.thmanyah.com
+   خط الموقع الأساسي بأوزانه الخمسة، من عائلة ثمانية سيريف تكست،
+   وملفاته داخل المجلد المحلي fonts. الخط من تصميم وملكية ثمانية
+   https://font.thmanyah.com
 
-   ضعي الملفات في ذلك المجلد بالأسماء المذكورة أدناه (صيغة woff2
-   أفضل، وتعمل صيغة otf أيضًا)، وستلتقطها الصفحة تلقائيًا. وحتى
-   ذلك الحين تظهر الصفحة بخط IBM Plex Sans Arabic الاحتياطي دون
-   أن ينكسر شيء. التفاصيل في ملف الشرح داخل مجلد الخطوط.
+   لا تحمّل المتصفحات إلا الأوزان المستعملة فعلًا في الصفحة،
+   والصفحة اليوم تستعمل: ٤٠٠ للنصوص، و٥٠٠ للأزرار والوسوم،
+   و٧٠٠ للعناوين، و٩٠٠ للعنوان الأكبر.
    ──────────────────────────────────────────────────────────── */
 
 @font-face {
-  font-family: "Thmanyah Sans";
-  src:
-    url("fonts/Thmanyah-Sans-Regular.woff2") format("woff2"),
-    url("fonts/Thmanyah-Sans-Regular.otf") format("opentype");
+  font-family: "Thmanyah";
+  src: url("fonts/thmanyah-serif-text-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Thmanyah";
+  src: url("fonts/thmanyah-serif-text-Regular.woff2") format("woff2");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Thmanyah Sans";
-  src:
-    url("fonts/Thmanyah-Sans-Medium.woff2") format("woff2"),
-    url("fonts/Thmanyah-Sans-Medium.otf") format("opentype");
+  font-family: "Thmanyah";
+  src: url("fonts/thmanyah-serif-text-Medium.woff2") format("woff2");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Thmanyah Sans";
-  src:
-    url("fonts/Thmanyah-Sans-Bold.woff2") format("woff2"),
-    url("fonts/Thmanyah-Sans-Bold.otf") format("opentype");
+  font-family: "Thmanyah";
+  src: url("fonts/thmanyah-serif-text-Bold.woff2") format("woff2");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
 }
 
 @font-face {
-  font-family: "Thmanyah Display";
-  src:
-    url("fonts/Thmanyah-Serif-Display-Regular.woff2") format("woff2"),
-    url("fonts/Thmanyah-Serif-Display-Regular.otf") format("opentype");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Thmanyah Display";
-  src:
-    url("fonts/Thmanyah-Serif-Display-Bold.woff2") format("woff2"),
-    url("fonts/Thmanyah-Serif-Display-Bold.otf") format("opentype");
-  font-weight: 700;
+  font-family: "Thmanyah";
+  src: url("fonts/thmanyah-serif-text-Black.woff2") format("woff2");
+  font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
@@ -71,11 +60,11 @@
   --blue: #0000ff;
   --blue-deep: #00007a;
 
-  /* النصوص */
+  /* النصوص — النِّسب مضبوطة لتبقى مقروءة فوق الأزرق الصريح */
   --ink: #ffffff;
   --ink-soft: rgba(255, 255, 255, 0.86);
-  --ink-mute: rgba(255, 255, 255, 0.66);
-  --ink-faint: rgba(255, 255, 255, 0.44);
+  --ink-mute: rgba(255, 255, 255, 0.74); /* تباين ٤٫٩:١ */
+  --ink-faint: rgba(255, 255, 255, 0.64); /* للوسوم الصغيرة الثانوية */
 
   /* لمسة دافئة تُوازن صرامة الأزرق */
   --sand: #f7f1e6;
@@ -87,11 +76,10 @@
   --line: rgba(255, 255, 255, 0.16);
   --line-hi: rgba(255, 255, 255, 0.38);
 
-  /* الخطوط: ثمانية أولًا، ثم بدائل قريبة الروح */
-  --font-sans: "Thmanyah Sans", "IBM Plex Sans Arabic", "SF Arabic", "Segoe UI",
+  /* الخطوط: ثمانية أولًا، ثم بدائل النظام إن تعذّر تحميله */
+  --font-body: "Thmanyah", "IBM Plex Sans Arabic", "SF Arabic", "Segoe UI",
     "Noto Sans Arabic", "Geeza Pro", system-ui, sans-serif;
-  --font-display: "Thmanyah Display", "Thmanyah Sans", "IBM Plex Sans Arabic",
-    "SF Arabic", "Noto Naskh Arabic", Georgia, serif;
+  --font-display: "Thmanyah", "SF Arabic", "Noto Naskh Arabic", Georgia, serif;
 
   /* المقاسات */
   --wrap: 68rem;
@@ -119,7 +107,7 @@ body {
   min-height: 100svh;
   background-color: var(--blue);
   color: var(--ink);
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-weight: 400;
   font-size: clamp(1rem, 0.94rem + 0.3vw, 1.125rem);
   line-height: 2;
@@ -332,6 +320,7 @@ a {
 
 .hero__title {
   font-size: clamp(2.75rem, 1.6rem + 5.2vw, 5rem);
+  font-weight: 900;
   line-height: 1.2;
   margin-bottom: clamp(1.5rem, 4vw, 2.25rem);
 }
