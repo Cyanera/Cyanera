@@ -1,0 +1,43 @@
+# نشر الصفحة على GitHub Pages عند كل دفعة إلى الفرع الأساسي
+name: نشر الصفحة
+
+on:
+  push:
+    branches:
+      - "main"
+      - "claude/arabic-portfolio-page-oos0qq"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# نشرة واحدة في كل مرة، دون إلغاء النشرة الجارية
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: جلب المستودع
+        uses: actions/checkout@v4
+
+      - name: تهيئة GitHub Pages
+        uses: actions/configure-pages@v5
+        with:
+          enablement: true
+
+      - name: رفع ملفات الموقع
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: .
+
+      - name: النشر
+        id: deployment
+        uses: actions/deploy-pages@v4
