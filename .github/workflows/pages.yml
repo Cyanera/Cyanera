@@ -1,4 +1,6 @@
-# نشر الصفحة على GitHub Pages عند كل دفعة إلى الفرع الأساسي
+# نشر الصفحة على GitHub Pages.
+# الخدمة مضبوطة على النشر من فرع gh-pages، وهذا السير يزامنه
+# مع الفرع الأساسي عند كل دفعة، فتتحدّث الصفحة المنشورة تلقائيًا.
 name: نشر الصفحة
 
 on:
@@ -9,9 +11,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
-  pages: write
-  id-token: write
+  contents: write
 
 # نشرة واحدة في كل مرة، دون إلغاء النشرة الجارية
 concurrency:
@@ -19,25 +19,11 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: جلب المستودع
         uses: actions/checkout@v4
 
-      - name: تهيئة GitHub Pages
-        uses: actions/configure-pages@v5
-        with:
-          enablement: true
-
-      - name: رفع ملفات الموقع
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: .
-
-      - name: النشر
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: مزامنة فرع gh-pages
+        run: git push origin HEAD:refs/heads/gh-pages --force
