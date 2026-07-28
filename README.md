@@ -42,9 +42,14 @@ python3 -m http.server 8000
 # ثم افتحي http://localhost:8000
 ```
 
-## النشر على GitHub Pages
+## النشر
 
-من إعدادات المستودع: **Settings ← Pages ← Source: Deploy from a branch**، ثم اختاري الفرع ومجلد الجذر `/`.
+الصفحة منشورة على: **<https://cyanera.github.io/Cyanera/>**
+
+والنشر تلقائي: خدمة GitHub Pages مضبوطة على فرع `gh-pages`، وسير العمل
+[`.github/workflows/pages.yml`](.github/workflows/pages.yml) يزامن هذا الفرع مع
+الفرع الأساسي عند كل دفعة. فيكفي أن تدفعي تعديلك إلى الفرع الأساسي، وتتحدّث
+الصفحة المنشورة خلال دقيقة. ولا حاجة لأي خطوة يدوية في الإعدادات.
 
 ## الخط
 
